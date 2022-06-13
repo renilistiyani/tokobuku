@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+     <!-- toko.pemesanan tree view -->
+    <record id="toko_pemesanan_view_tree" model="ir.ui.view">
+      <field name="name">Daftar pemesanan</field>
+      <field name="model">toko.pemesanan</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="nama_pemesan"/>
+              <field name="kode_pemesanan"/>
+              <field name="tanggal"/>
+              <field name="harga_pesan"/>
+              <field name="jumlah_pesan"/>
+          </tree>
+      </field>
+  </record>
+
+    <!-- toko.pemesanan form view -->
+    <record id="toko_pemesanan_view_form" model="ir.ui.view">
+     <field name="name">Detail Pemesanan</field>
+     <field name="model">toko.pemesanan</field>
+     <field name="arch" type="xml">
+         <form string="">
+             <sheet>
+                 <group>
+                    <field name="nama_pemesan"/>
+                    <field name="kode_pemesanan"/>
+                    <field name="tanggal"/>
+                    <field name="harga_pesan"/>
+                    <field name="jumlah_pesan"/>
+                 </group>
+             </sheet>
+         </form>
+     </field>
+    </record>
+
+    <!-- toko.pemesanan action window -->
+    <record id="toko_pemesanan_action" model="ir.actions.act_window">
+        <field name="name">Daftar Pemesaan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">toko.pemesanan</field>
+        <field name="view_mode">tree,form</field>        
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="toko_pemesanan_menu_act" 
+              name="Daftar Pemesanan" 
+              parent="toko_pemesanan_menu_categ" 
+              action="toko_pemesanan_action" 
+              sequence="20"/>
+</odoo>

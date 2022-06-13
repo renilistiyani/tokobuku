@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="toko_buku_menu_root" name="TOKO BUKU" sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="toko_supplier_menu_categ" name="SUPPLIER" parent="toko_buku_menu_root" sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="toko_pemesanan_menu_categ" name="PEMESANAN" parent="toko_buku_menu_root" sequence="20"/>
+
+    
+    
+</odoo>
